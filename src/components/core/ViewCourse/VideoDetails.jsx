@@ -10,8 +10,7 @@ import { updateCompletedLectures } from '../../../slices/viewCourseSlice'
 import IconBtn from '../../common/IconBtn'
 const VideoDetails = () => {
   const { courseId, sectionId, subSectionId } = useParams()
-  console.log('courseid', courseId, "sectionId", sectionId, "subSectionId", subSectionId);
-
+ 
   const navigate = useNavigate()
   const location = useLocation()
   const playerRef = useRef(null)
@@ -26,25 +25,23 @@ const VideoDetails = () => {
 
   useEffect(() => {
     ; (async () => {
-      console.log('courseSectionData...ee',courseSectionData);
-      console.log('course id',courseId,"sectionId",sectionId,"subSectionId",subSectionId);
-      
+     
       
       if (!courseId && !sectionId && !subSectionId) {
         navigate(`/dashboard/enrolled-courses`)
       }
 
       if(courseSectionData.length) {
-        console.log('coursesectiondata',courseSectionData);
+       
         
          
-        const filteredData=courseSectionData.filter((data)=> data._id ==sectionId);
+        const filteredData=courseSectionData.filter((data)=> data._id ===sectionId);
         
         
-          console.log('filteredData..', filteredData);
           
-        const filteredVideoData = filteredData?.[0]?.subSection.filter((data) => data._id == subSectionId)
-        console.log('filteredVideoData.....', filteredVideoData);
+          
+        const filteredVideoData = filteredData?.[0]?.subSection.filter((data) => data._id === subSectionId)
+        
 
        if(filteredVideoData){
 

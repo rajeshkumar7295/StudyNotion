@@ -26,7 +26,7 @@ const CourseReviewModal = ({setReviewModal}) => {
         },
         token
         )
-        console.log('courseId....',courseEntireData.courseDetails._id);
+       
         
         setReviewModal(false)
     }

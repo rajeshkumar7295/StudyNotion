@@ -22,8 +22,7 @@ const VideoDetailsSidebar = ({ setReviewModal }) => {
 
   useEffect(() => {
     ; (async () => {
-      console.log('666666666666');
-      
+     
       
       if (courseSectionData.length) {
 
