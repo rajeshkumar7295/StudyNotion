@@ -29,11 +29,7 @@ app.use(
     })
 
 )
-app.use(fileupload({
-    useTempFiles:true,
-    useTempDir:"/temp"   
-}
-));
+
 // cloudinary connection
 cloudinaryConnect();
 
